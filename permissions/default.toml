@@ -1,0 +1,38 @@
+"$schema" = "schemas/schema.json"
+
+# Define individual permissions for each command
+[[permission]]
+identifier = "allow-play"
+description = "Allows playing video files or URLs"
+commands.allow = ["play"]
+
+[[permission]]
+identifier = "allow-control"
+description = "Allows controlling video playback (pause, resume, seek, etc.)"
+commands.allow = ["control"]
+
+[[permission]]
+identifier = "allow-get-info"
+description = "Allows getting information about a playing video"
+commands.allow = ["get_info"]
+
+[[permission]]
+identifier = "allow-close"
+description = "Allows closing a video"
+commands.allow = ["close"]
+
+[[permission]]
+identifier = "allow-list-presets"
+description = "Allows listing available presets"
+commands.allow = ["list_presets"]
+
+# Define the default permission set
+[default]
+description = "Default permissions for the playa plugin"
+permissions = [
+  "allow-play",
+  "allow-control", 
+  "allow-get-info", 
+  "allow-close", 
+  "allow-list-presets"
+]
